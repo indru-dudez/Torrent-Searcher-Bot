@@ -88,7 +88,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help))
     dispatcher.add_handler(CommandHandler("info", info))
-    dispatcher.add_handler(MessageHandler(Filters.text & (~Filters.command), torr_serch))
+    dispatcher.add_handler(CommandHandler("find", torr_serch))
     updater.start_polling() #set bot to polling, if you use webhooks, replace this statement with the url of webhook.,
     updater.idle()
 
