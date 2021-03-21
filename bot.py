@@ -28,6 +28,8 @@ def start(update: Update, context: CallbackContext) -> None:
 
 Welcome to the Torrent Searcher Bot. Here you will find all the torrents you search for...
 
+"ADD MORE DETAILS TO YOUR SEARCH TO GET ACCURATE RESULTS 😅"
+
 Type /help to know how to use the bot.
 
 Type /info to know about the developer.""", parse_mode=ParseMode.MARKDOWN)
@@ -69,7 +71,7 @@ If you've not seen any results, try researching...!""")
 #CommandHnadler for message "info"
 def info(update: Update, context: CallbackContext) -> None:
     #Never Mind :-)
-    update.message.reply_text("""*Made with ❤️ in India by {YOUR NAME}.*
+    update.message.reply_text("""*Made with 🐍. Maintaned my @SI_NN_ER_LS.*
 
 *Language:* [Python3](https://www.python.org/)
 
@@ -77,7 +79,7 @@ def info(update: Update, context: CallbackContext) -> None:
 
 *Server:* [Heroku](www.heroku.com)
 
-*Source Code:* `Sore ga kuru made matsu`
+*Source Code:* `MAY BE NEXT TIME`
 
 If you 👍 this bot, Support the developer by just sharing the bot to Your friends...""", parse_mode=ParseMode.MARKDOWN)
 
