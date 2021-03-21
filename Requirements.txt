@@ -1,3 +1,5 @@
 python-telegram-bot
 Python3
 Requests
+logging
+telegram
