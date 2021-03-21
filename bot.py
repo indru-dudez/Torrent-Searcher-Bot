@@ -20,7 +20,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TOKEN = "YOUR API TOKEN HERE"
+TOKEN = "1419935389:AAGH1ed0OWppcm5zncEM6xdE7wOLaQfrfwU"
 
 #CommandHandler for message "Start"
 def start(update: Update, context: CallbackContext) -> None:
