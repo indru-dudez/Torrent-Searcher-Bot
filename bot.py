@@ -40,7 +40,7 @@ This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on 
 
 
 #CommandHandler to get torrents for the query
-def torr_serch(update: Update, pass_args: args, context: CallbackContext) -> None:
+def torr_serch(bot, update, args, callbackcontext):
     torr_serch = ' '.join(args)
     try:
         update.message.reply_text("Searching results for {}".format(update.message.text))
