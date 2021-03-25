@@ -41,7 +41,7 @@ This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on 
 
 #CommandHandler to get torrents for the query
 def torr_serch(update: Update, context: CallbackContext) -> None:
-    torr_serch = ' '.join(context.args) 
+    torr_serch = 'search'.join(context.args) 
     try:
         update.message.reply_text("Searching results for {}".format(update.message.text))
         url = "https://api.sumanjay.cf/torrent/?query={}".format(update.message.text)
@@ -89,7 +89,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("start", start))
     dispatcher.add_handler(CommandHandler("help", help))
     dispatcher.add_handler(CommandHandler("info", info))
-    dispatcher.add_handler(CommandHandler("search".text, torr_serch, pass_args=True))
+    dispatcher.add_handler(CommandHandler("search", torr_serch, pass_args=True))
     updater.start_polling() #set bot to polling, if you use webhooks, replace this statement with the url of webhook.,
     updater.idle()
 
