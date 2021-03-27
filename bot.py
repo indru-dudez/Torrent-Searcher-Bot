@@ -21,7 +21,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TOKEN = "1419935389:AAGH1ed0OWppcm5zncEM6xdE7wOLaQfrfwU"
+TOKEN = "1630656372:AAHQvQzF_08wXXxCFYS_lDdI56QiS3ogva8"
 
 #CommandHandler for message "Start"
 def start(update: Update, context: CallbackContext) -> None:
