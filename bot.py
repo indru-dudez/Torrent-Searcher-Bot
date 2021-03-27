@@ -10,6 +10,7 @@
 #import the required files
 import requests
 import logging
+import config
 from telegram import *
 from telegram.ext import *
 
