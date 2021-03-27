@@ -40,12 +40,6 @@ def start(update: Update, context: CallbackContext) -> None:
                     parse_mode='HTML',
                     reply_markup=reply_markup)
 
-#CommandHandler for message "Help"
-def help(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text("""Hey, this is not most complicated bot. Just /search and query you want to search and i will do the rest!
-
-This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on @SI_NN_ER_LS""", parse_mode=ParseMode.MARKDOWN)
-
 
 #CommandHandler to get torrents for the query
 def torr_serch(update: Update, context: CallbackContext) -> None:
@@ -89,6 +83,12 @@ def info(update: Update, context: CallbackContext) -> None:
 *Source Code:* `MAY BE NEXT TIME`
 
 If you 👍 this bot, Support the developer by just sharing the bot to Your friends...""", parse_mode=ParseMode.MARKDOWN)
+
+#CommandHandler for message "Help"
+def help(update: Update, context: CallbackContext) -> None:
+    update.message.reply_text("""Hey, this is not most complicated bot. Just send me the query you want to search and i will do the rest!
+
+This bot is in the *BETA* stage. So, if any error occurs, feel free to pm my master""", parse_mode=ParseMode.MARKDOWN)
 
 #Add all handlers to the main function.
 def main() -> None:
