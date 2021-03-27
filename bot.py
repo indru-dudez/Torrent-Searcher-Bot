@@ -46,6 +46,10 @@ def torr_serch(update: Update, context: CallbackContext) -> None:
         update.message.reply_text("Searching results for {}".format(update.message.text.split(' ',1)[1]))
         url = "https://api.sumanjay.cf/torrent/?query={}".format(update.message.text.split(' ',1)[1])
         results = requests.get(url).json()
+        if len(json) >= 20:
+        limit = 20
+    else:
+        limit = len(json)
         print(results)
         for item in results:
             age = item.get('age')
