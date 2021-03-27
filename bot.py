@@ -86,7 +86,7 @@ If you 👍 this bot, Support the developer by just sharing the bot to Your frie
 
 #CommandHandler for message "Help"
 def help(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text("""Hey, this is not most complicated bot. Just send me the query you want to search and i will do the rest!
+    update.message.reply_text("""Hey, this is not most complicated bot. Just use /search command and enter the query you want to search and i will do the rest!
 
 This bot is in the *BETA* stage. So, if any error occurs, feel free to pm my master""", parse_mode=ParseMode.MARKDOWN)
 
