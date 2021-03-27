@@ -42,9 +42,11 @@ def start(update: Update, context: CallbackContext) -> None:
 
 #CommandHandler for message "Help"
 def help(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text("""Hey, this is not most complicated bot. Just send me the query you want to search and i will do the rest!
+    update.message.reply_text("""Hey, this is not most complicated bot.
+Use /search command and type your query you want to search and i will do the rest!
+Use /info to know the server details. 
 
-This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on {YOUR NAME HERE}""", parse_mode=ParseMode.MARKDOWN)
+This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on @SI_NN_ER_LS.""", parse_mode=ParseMode.MARKDOWN)
 
 
 #CommandHandler to get torrents for the query
