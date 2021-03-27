@@ -27,11 +27,11 @@ def start(update: Update, context: CallbackContext) -> None:
     chat_id = update.message.chat.id
     keyboard = [[
         InlineKeyboardButton('Support Chat',
-                             url=https://t.me/Torrent_To_Files)
+                             url=config.supportChatUrl)
     ],
         [
             InlineKeyboardButton('🕵️MASTER🤖',
-                                 url=https://t.me/SI_NN_ER_LS)
+                                 url=config.appUrl)
         ]]
     reply_markup = InlineKeyboardMarkup(keyboard)
     bot.sendMessage(chat_id, "<b>Hi, I Can Search Torrent Database For Your Query.</b>\n\n"
