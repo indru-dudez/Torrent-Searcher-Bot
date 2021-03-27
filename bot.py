@@ -43,8 +43,8 @@ This bot is in the *BETA* stage. So, if any error occurs, feel free to pm me on 
 def torr_serch(update: Update, context: CallbackContext) -> None:
     torr_serch = ' '.join(context.args) 
     try:
-        update.message.reply_text("Searching results for {}".format(update.message.text))
-        url = "https://api.sumanjay.cf/torrent/?query={}".format(update.message.text)
+        update.message.reply_text("Searching results for {}".format(update.message.text.split(' ',1)[1]))
+        url = "https://api.sumanjay.cf/torrent/?query={}".format(update.message.text.split(' ',1)[1])
         results = requests.get(url).json()
         print(results)
         for item in results:
