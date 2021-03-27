@@ -24,13 +24,20 @@ TOKEN = "1419935389:AAGH1ed0OWppcm5zncEM6xdE7wOLaQfrfwU"
 
 #CommandHandler for message "Start"
 def start(update: Update, context: CallbackContext) -> None:
-    update.message.reply_text(f"""*Hi {update.effective_chat.first_name},* 
-
-Welcome to the Torrent Searcher Bot. Here you will find all the torrents you search for...
-
-Type /help to know how to use the bot.
-
-Type /info to know about the developer.""", parse_mode=ParseMode.MARKDOWN)
+    chat_id = update.message.chat.id
+    keyboard = [[
+        InlineKeyboardButton('Support Chat',
+                             url=config.supportChatUrl)
+    ],
+        [
+            InlineKeyboardButton('🕵️MASTER🤖',
+                                 url=config.appUrl)
+        ]]
+    reply_markup = InlineKeyboardMarkup(keyboard)
+    bot.sendMessage(chat_id, "<b>Hi, I Can Search Torrent Database For Your Query.</b>\n\n"
+                             "Supports Inline Mode \n-/help For More Info\n",
+                    parse_mode='HTML',
+                    reply_markup=reply_markup)
 
 #CommandHandler for message "Help"
 def help(update: Update, context: CallbackContext) -> None:
@@ -46,10 +53,6 @@ def torr_serch(update: Update, context: CallbackContext) -> None:
         update.message.reply_text("Searching results for {}".format(update.message.text.split(' ',1)[1]))
         url = "https://api.sumanjay.cf/torrent/?query={}".format(update.message.text.split(' ',1)[1])
         results = requests.get(url).json()
-        if len(json) >= 20:
-        limit = 20
-    else:
-        limit = len(json)
         print(results)
         for item in results:
             age = item.get('age')
